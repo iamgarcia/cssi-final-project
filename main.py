@@ -13,8 +13,8 @@ import logging
 import json
 import urllib
 import urllib2
-from config import *
 from google.appengine.api import urlfetch
+from config import *
 from models import *
 from weather import getWeatherURL
 
@@ -145,11 +145,13 @@ class AboutPage(webapp2.RequestHandler):
 
 class WeatherPage(webapp2.RequestHandler):
 
+    # TODO: Add dictionary to the website
+
     def get(self):
         logging.warning('WeatherPage get(self) working')
 
         try:
-            form_data = urllib.urlencode({'zip': '92078',
+            form_data = urllib.urlencode({'zip': '92104',
                                             'appid': OPENWEATHER_API_KEY})
             result = urlfetch.fetch(getWeatherURL() + form_data)
             if result.status_code == 200:
@@ -172,7 +174,7 @@ app = webapp2.WSGIApplication([
     ('/exploration/wineries', ExplorationWineriesPage),
     ('/exploration/parks', ExplorationParkPage),
     ('/exploration/nightlife', ExplorationNightlifePage),
-    ('/dining/', DiningPage),
+    ('/dining', DiningPage),
     ('/dining/fast-food', DiningFastFoodPage),
     ('/dining/mexican', DiningMexicanPage),
     ('/dining/asian', DiningAsianPage),
