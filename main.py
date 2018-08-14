@@ -13,7 +13,10 @@ import logging
 import json
 import urllib
 import urllib2
+from config import *
+from google.appengine.api import urlfetch
 from models import *
+from weather import getWeatherURL
 
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -140,6 +143,27 @@ class AboutPage(webapp2.RequestHandler):
     def post(self):
         logging.warning('AboutPage post(self) working')
 
+class WeatherPage(webapp2.RequestHandler):
+
+    def get(self):
+        logging.warning('WeatherPage get(self) working')
+
+        try:
+            form_data = urllib.urlencode({'zip': '92078',
+                                            'appid': OPENWEATHER_API_KEY})
+            result = urlfetch.fetch(getWeatherURL() + form_data)
+            if result.status_code == 200:
+                content = json.loads(result.content)
+                self.response.write(content)
+            else:
+                logging.exception(result)
+                self.response.status = result.status_code
+        except urlfetch.Error:
+            logging.exception('Caught exception fetching url')
+
+    def post(self):
+        logging.warning('WeatherPage post(self) working')
+
 # The app configuration section
 app = webapp2.WSGIApplication([
     ('/', HomePage),
@@ -153,5 +177,6 @@ app = webapp2.WSGIApplication([
     ('/dining/mexican', DiningMexicanPage),
     ('/dining/asian', DiningAsianPage),
     ('/dining/italian', DiningItalianPage),
-    ('/about', AboutPage)
+    ('/about', AboutPage),
+    ('/weather', WeatherPage)
 ], debug=True)

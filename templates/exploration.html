@@ -14,25 +14,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sample</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="newpage.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="dining.css" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
-    <script src="index.js"></script>
 </head>
 
 <body>
-<div id="Row_1">
-  <img src="" alt="">
-  <a id="one" href="#">Homepage</a>
-  <a id="one" href="#">Explore</a>
-  <a id="one" href="#">Dining</a>
-  <a id="one" href="#">About</a>
-</div>
+  <div class="navbar">
+        <div class="ends"></div>
+        <div class="box">Home</div>
+        <div id = "exploration" class="box">Exploration
+          <div class ="content">
+            <a class="drop" href="">Hiking</a>
+            <a class="drop" href="">Wineries</a>
+            <a class="drop" href="">Parks</a>
+            <a class="drop" href="">Nightlife</a>
+          </div>
+        </div>
+        <div id = "dining" class="box">Dining
+          <div class = "content">
+            <a  class="drop" href="">Mexican</a>
+            <a  class="drop" href="">Asian</a>
+            <a  class="drop" href="">Italian</a>
+            <a  class="drop"href="">Fast Food</a>
+          </div>
+        </div>
+
+        <div class="box">About</div>
+        <div class="ends"></div>
+  </div>
 <div id="Row_2">
-  <p>a</p>
+
 </div>
-
-
-
+  <script src="dining.js"></script>
 </body>
 
 </html>
