@@ -1,0 +1,71 @@
+.content{
+  display: none;
+}
+
+.box {
+  display: block;
+  flex: 0 1 190px;
+  text-align: center;
+}
+
+.ends {
+  display: block;
+  flex: 1;
+}
+.navbar {
+  color: #1e88e5;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  opacity: 1;
+}
+
+.box:hover
+.content {
+  color: purple;
+  margin-left: 10px;
+
+  text-decoration: none;
+  display: block;
+  position: absolute;
+
+  z-index: 1000;
+
+}
+
+.drop {
+  background-color: white;
+  color: #ffa726;
+  padding: 10px 50px;
+  text-decoration: none;
+  display: block;
+}
+
+
+#Row_2 {
+  position: absolute;
+  height:100%;
+  width: 80%;
+  background-color: #edf0f3;
+  opacity: 0;
+}
+
+a {
+  text-align: center;
+  flex: 1 1 0;
+  margin: 0;
+  padding: 10px 20px;
+  color: #1e88e5;
+  text-decoration: none;
+}
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-image: url("https://u.realgeeks.media/sdcoastalhomesales/Point_Loma_Skyline.jpg");
+  background-repeat: no-repeat;
+  margin: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 0;
+}

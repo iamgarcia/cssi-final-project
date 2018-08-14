@@ -1,6 +1,5 @@
 .content{
   display: none;
-
 }
 
 .box {
@@ -14,10 +13,11 @@
   flex: 1;
 }
 .navbar {
-  color: #FFC61D;
+  color: #1e88e5;
   display: flex;
-  background-color: black;
+  background-color: white;
   padding: 20px;
+  opacity: 1;
 }
 
 .box:hover
@@ -31,12 +31,11 @@
 
   z-index: 1000;
 
-
 }
 
 .drop {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #ffa726;
   padding: 10px 50px;
   text-decoration: none;
   display: block;
@@ -48,6 +47,7 @@
   height:100%;
   width: 80%;
   background-color: #edf0f3;
+  opacity: 0;
 }
 
 a {
@@ -55,13 +55,14 @@ a {
   flex: 1 1 0;
   margin: 0;
   padding: 10px 20px;
-  color: white;
+  color: #1e88e5;
+  text-decoration: none;
 }
 
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-image: url("https://www.choicehotels.com/cms/images/choice-hotels/demand-articles/image_best-beaches-in-san-diego_img1/image_best-beaches-in-san-diego_img1.jpg");
+  background-image: url("https://u.realgeeks.media/sdcoastalhomesales/Point_Loma_Skyline.jpg");
   background-repeat: no-repeat;
   margin: 0px;
   margin-left: 10%;

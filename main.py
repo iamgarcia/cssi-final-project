@@ -47,7 +47,7 @@ class ExplorationHikingPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('ExplorationHikingPage get(self) working')
-        mypage = env.get_template('templates/exploration.html')
+        mypage = env.get_template('templates/hiking.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -57,7 +57,7 @@ class ExplorationWineriesPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('ExplorationWineriesPage get(self) working')
-        mypage = env.get_template('templates/exploration.html')
+        mypage = env.get_template('templates/wineries.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -67,7 +67,7 @@ class ExplorationParkPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('ExplorationParkPage get(self) working')
-        mypage = env.get_template('templates/exploration.html')
+        mypage = env.get_template('templates/park.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -77,7 +77,7 @@ class ExplorationNightlifePage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('ExplorationNightlifePage get(self) working')
-        mypage = env.get_template('templates/exploration.html')
+        mypage = env.get_template('templates/nightlife.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -97,7 +97,7 @@ class DiningFastFoodPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('DiningFastFoodPage get(self) working')
-        mypage = env.get_template('templates/dining.html')
+        mypage = env.get_template('templates/fastfood.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -107,7 +107,7 @@ class DiningMexicanPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('DiningMexicanPage get(self) working')
-        mypage = env.get_template('templates/dining.html')
+        mypage = env.get_template('templates/mexican.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -117,7 +117,7 @@ class DiningAsianPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('DiningAsianPage get(self) working')
-        mypage = env.get_template('templates/dining.html')
+        mypage = env.get_template('templates/asian.html')
         self.response.write(mypage.render())
 
     def post(self):
@@ -127,7 +127,7 @@ class DiningItalianPage(webapp2.RequestHandler):
 
     def get(self):
         logging.warning('DiningItalianPage get(self) working')
-        mypage = env.get_template('templates/dining.html')
+        mypage = env.get_template('templates/italian.html')
         self.response.write(mypage.render())
 
     def post(self):
