@@ -1,4 +1,5 @@
 config.py
+config.pyc
 main.pyc
 models.pyc
-config.pyc
+weather.pyc
