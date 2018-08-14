@@ -1,0 +1,31 @@
+#Row_1 {
+  display: flex;
+}
+
+#Row_2 {
+  position: absolute;
+  height:100%;
+  width: 80%;
+  background-color: #edf0f3;
+}
+
+a {
+  text-align: center;
+  flex: 1 1 0;
+  margin: 0;
+  padding: 20px 20px;
+  color: white;
+}
+
+#one {
+  background-color: black;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-image: url("https://www.choicehotels.com/cms/images/choice-hotels/demand-articles/image_best-beaches-in-san-diego_img1/image_best-beaches-in-san-diego_img1.jpg");
+  background-repeat: no-repeat;
+  margin: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
