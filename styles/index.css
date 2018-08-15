@@ -57,6 +57,11 @@
   background-color: white;
 }
 
+.logo > img {
+  margin-top: 5px;
+  margin-left: 140px;
+}
+
 #Row_2 {
   position: absolute;
   height: 100%;
@@ -78,7 +83,7 @@
 .trending {
   position: absolute;
   margin-top: 975px;
-  padding-left: 275px;
+  padding-left: 200px;
 }
 
 a {
