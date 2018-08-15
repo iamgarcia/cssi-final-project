@@ -370,7 +370,7 @@ app = webapp2.WSGIApplication([
     ('/exploration/parks', ExplorationParkPage),
     ('/exploration/nightlife', ExplorationNightlifePage),
     ('/dining', DiningPage),
-    ('/dining/fast-food', DiningFastFoodPage),
+    ('/dining/fastfood', DiningFastFoodPage),
     ('/dining/mexican', DiningMexicanPage),
     ('/dining/asian', DiningAsianPage),
     ('/dining/italian', DiningItalianPage),

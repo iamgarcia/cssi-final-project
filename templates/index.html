@@ -12,14 +12,16 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home</title>
+  <title>Welcome to San Diego</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="styles/index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
 </head>
 
 <body>
 
+<div class = "grid-one">
   <!-- Weather Display -->
   <div class="weather">
     <p>{{temperature}}° F</p>
@@ -59,11 +61,52 @@
     </div>
     <div class="ends"></div>
   </div>
-  <div id="Row_2">
 
-  </div>
+
+  <!-- <div id="Row_2">
+  </div> -->
 
   <!-- Page Content Below This -->
+
+  <h1 class="header">Welcome to</h1>
+  <h1 class="header-sd">San Diego</h1>
+
+</div>
+
+<div class = "grid-two">
+  <h2 class="trending"> Trending: Here are the top 5 hot-spots in San Diego right now!</h2>
+  <div id="mainpagecontent">
+    <div>
+      <h3><a href="https://www.balboapark.org/">1. Balboa Park </a></h3>
+      <img src="https://www.sandiego.org/-/media/images/sdta-site/articles/balboa-park/400x216/400x216-balboa-hero-small.jpg?h=216&la=en&w=400" alt="Balboa Park" height="200px" width="400px">
+      <p style="width: 400px;">
+        Balboa Park is home to more than 16 museums, multiple performing arts venues, lovely gardens, trails, and many other creative and recreational attractions, including the San Diego Zoo. With a variety of cultural institutions among its 1,200 beautiful
+        and lushly planted acres, there is something for everyone.
+      </p>
+    </div>
+    <div>
+      <h3> <a href="https://www.midway.org/visit/plan-your-adventure/">2. USS Midway Museum </a></h3>
+      <img src="https://www.outsideourbubble.com/wp-content/uploads/2011/02/IMG_2905.jpg" height="200" width="400" alt="USS Midway">
+      <p style="width: 400px;">An exciting maritime mueseum at Navy Pier. The museum consists of the aircraft carrier Midway. The ship houses an extensive collection of aircraft, many of which were built in Southern California.</p>
+    </div>
+    <div>
+      <h3> <a href="https://www.gaslamp.org/">3. Gaslamp Quarter</a></h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSesG5ggEde4AncUqat8CspFMjiiSNvpDo0ToFUDSHxsD2FMkU7Aw" height="200" width="400" alt="">
+      <p style="width: 400px;">The Gaslamp Quarter's 16 blocks are peppered with Victorian-style buildings that now house a variety of shops, art galleries, theatres and trendy restaurants, not to mention plenty of bars and clubs.</p>
+    </div>
+    <div>
+      <h3> <a href="https://torreypine.org/">4. Torrey Pines State Reserve</a></h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr2UayOoyA427xpFHItJdTCNS_NW3TvG50zw4Q0MUIV8L7iWI5GQ" width="400" height="200" alt="">
+      <p style="width: 400px;">Want to see what San Diego looked like at its founding? It's at the Torrey Pines State Reserve. This oceanfront reserve features 1,750 acres of unspoiled land, protecting the unique topography and various types of flora present from way back when,
+        including the Torrey Pine, America's rarest pine tree. </p>
+    </div>
+    <div>
+      <h3><a href="https://sdmaritime.org/">5. Maritime Museum of San Diego</a></h3>
+      <img src="https://sdmaritime.org/wp-content/uploads/2015/06/MuseumShipsMP-625x417.jpg" height="200" width="400" alt="">
+      <p style="width: 400px;"> The Maritime Museum offers a hands-on look at San Diego's days as a bustling seaport. You can tour all types of historic vessels, from sailing ships to submarines, including the world's oldest active ship, the Star of India.</p>
+    </div>
+  </div>
+</div>
   <script src="index.js"></script>
 </body>
 
