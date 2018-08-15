@@ -77,10 +77,26 @@ a {
   text-decoration: none;
 }
 
+.header {
+  margin-top: 250px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2.5em;
+  color: white;
+}
+
+.header-variety {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 4em;
+  color: white;
+}
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-image: url("https://u.realgeeks.media/sdcoastalhomesales/Point_Loma_Skyline.jpg");
+  background-image: url("https://i.pinimg.com/originals/35/4e/3d/354e3d90db0d1e49d441dc3a878c84b9.jpg");
   background-repeat: no-repeat;
   margin: 0px;
   margin-left: 10%;
