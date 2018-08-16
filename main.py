@@ -361,6 +361,46 @@ class WeatherPage(webapp2.RequestHandler):
     def post(self):
         logging.warning('WeatherPage post(self) working')
 
+class YelpPage(webapp2.RequestHandler):
+
+    def get(self):
+        logging.warning('YelpPage get(self) working')
+
+        search_term = self.request.get('q')
+        if search_term:
+            lterm = search_term.lower()
+            # create key
+            key = ndb.Key('UserSearch', lterm)
+            # Read database
+            search = key.get()
+            if not search:
+                # Create if not there
+                search = UserSearch(
+                    key=key, count=0,
+                    term=search_term)
+            # Update count
+            search.increment()
+            # Save
+            search.put()
+        else:
+            search_term = "hiking"
+        params = {'term': search_term,
+                  'location': 'San Diego, California'}
+        form_data = urllib.urlencode(params)
+        api_url = 'https://api.yelp.com/v3/businesses/search?' + form_data
+
+        # Add your own API key
+        request = urllib2.Request(api_url, headers={"Authorization" : "Bearer " + YELP_API_KEY})
+        response = urllib2.urlopen(request).read()
+        content = json.loads(response)
+        mypage = env.get_template('templates/yelp.html')
+        variables = {'content': content,
+                     'q': search_term}
+        self.response.write(mypage.render(variables))
+
+    def post(self):
+        logging.warning('YelpPage post(self) working')
+
 # The app configuration section
 app = webapp2.WSGIApplication([
     ('/', HomePage),
@@ -375,5 +415,6 @@ app = webapp2.WSGIApplication([
     ('/dining/asian', DiningAsianPage),
     ('/dining/italian', DiningItalianPage),
     ('/about', AboutPage),
-    ('/weather', WeatherPage)
+    ('/weather', WeatherPage),
+    ('/yelp', YelpPage)
 ], debug=True)
