@@ -60,6 +60,11 @@
   background-color: white;
 }
 
+.logo > img {
+  margin-top: 5px;
+  margin-left: 140px;
+}
+
 #Row_2 {
   position: absolute;
   height:100%;
