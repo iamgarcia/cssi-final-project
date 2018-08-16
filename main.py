@@ -230,38 +230,38 @@ class DiningPage(webapp2.RequestHandler):
             logging.exception('Caught exception fetching url')
 
         # Yelp API
-        search_term = self.request.get('searchEntry')
-        if search_term:
-            lterm = search_term.lower()
-            # create key
-            key = ndb.Key('UserSearch', lterm)
-            # Read database
-            search = key.get()
-            if not search:
-                # Create if not there
-                search = UserSearch(
-                    key=key, count=0,
-                    term=search_term)
-            # Update count
-            search.increment()
-            # Save
-            search.put()
-        else:
-            search_term = "restaurants"
-        params = {'term': search_term,
-                  'location': 'San Diego, California',
-                  'limit': 5}
-        form_data = urllib.urlencode(params)
-        api_url = 'https://api.yelp.com/v3/businesses/search?' + form_data
-
-        # Add your own API key
-        request = urllib2.Request(api_url, headers={"Authorization" : "Bearer " + YELP_API_KEY})
-        response = urllib2.urlopen(request).read()
-        content = json.loads(response)
-        mypage = env.get_template('templates/dining.html')
-        variables = {"content": content['businesses'],
-                     "temperature": temp}
-        #self.response.write(variables))
+        # search_term = self.request.get('searchEntry')
+        # if search_term:
+        #     lterm = search_term.lower()
+        #     # create key
+        #     key = ndb.Key('UserSearch', lterm)
+        #     # Read database
+        #     search = key.get()
+        #     if not search:
+        #         # Create if not there
+        #         search = UserSearch(
+        #             key=key, count=0,
+        #             term=search_term)
+        #     # Update count
+        #     search.increment()
+        #     # Save
+        #     search.put()
+        # else:
+        #     search_term = "restaurants"
+        # params = {'term': search_term,
+        #           'location': 'San Diego, California',
+        #           'limit': 5}
+        # form_data = urllib.urlencode(params)
+        # api_url = 'https://api.yelp.com/v3/businesses/search?' + form_data
+        #
+        # # Add your own API key
+        # request = urllib2.Request(api_url, headers={"Authorization" : "Bearer " + YELP_API_KEY})
+        # response = urllib2.urlopen(request).read()
+        # content = json.loads(response)
+        # mypage = env.get_template('templates/dining.html')
+        # variables = {'content': content['businesses'],
+        #              'q': search_term}
+        #self.response.write(mypage.render(variables))
         # TODO Strip the location, name, and rating
         # b = content['businesses']
         # logging.warning(b[0]['name'])
