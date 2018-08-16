@@ -99,3 +99,62 @@ body {
   margin-right: 10%;
   z-index: 0;
 }
+
+.header {
+  margin-top: 250px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 6em;
+  color: white;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+#spots-heading {
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  color: white;
+}
+
+.hotspots {
+  display: grid;
+  grid-template-columns: 2fr 2fr ;
+  grid-row-gap: 100px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-top: 525px;
+  padding-left: 160px;
+
+}
+
+.spotheads a{
+  color: black;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: Apple_Chancery;
+  font-size: 30px;
+}

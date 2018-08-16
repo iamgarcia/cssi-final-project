@@ -1,4 +1,4 @@
-.content{
+.content {
   display: none;
 }
 
@@ -12,6 +12,7 @@
   display: block;
   flex: 1;
 }
+
 .navbar {
   color: #1e88e5;
   display: flex;
@@ -20,17 +21,13 @@
   opacity: 1;
 }
 
-.box:hover
-.content {
+.box:hover .content {
   color: purple;
   margin-left: 10px;
-
   text-decoration: none;
   display: block;
   position: absolute;
-
   z-index: 1000;
-
 }
 
 .drop {
@@ -60,14 +57,14 @@
   background-color: white;
 }
 
-.logo > img {
+.logo>img {
   margin-top: 5px;
   margin-left: 140px;
 }
 
 #Row_2 {
   position: absolute;
-  height:100%;
+  height: 100%;
   width: 80%;
   background-color: #edf0f3;
   opacity: 0;
@@ -87,7 +84,6 @@ a {
   font-family: 'Ubuntu', sans-serif;
   font-size: 60px;
   color: white;
-
 }
 
 body {
@@ -98,4 +94,31 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   z-index: 0;
+}
+
+#spots-heading {
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+  font-family: Apple_Chancery;
+  font-weight: bold;
+  color: white;
+}
+
+.hotspots {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-row-gap: 100px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-top: 20px;
+  padding-left: 200px;
+}
+
+.spotheads a {
+  color: white;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: Apple_Chancery;
+  font-size: 30px;
 }

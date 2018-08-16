@@ -66,7 +66,6 @@
 }
 
 #Row_2 {
-  position: absolute;
   height:100%;
   width: 80%;
   background-color: #edf0f3;
@@ -92,10 +91,71 @@ a {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-image: url("http://architectureimg.com/wp-content/uploads/2017/06/bridges-wonderful-san-diego-beach-pier-sunset-california-waves-sea-wallpaper-wide.jpg");
+  background-image: url("http://designateddrivers4you.com/wp-content/uploads/2017/09/ca0e1d_c62abfc303314dfbb8deacc3468f973dmv2.jpg");
   background-repeat: no-repeat;
   margin: 0px;
   margin-left: 10%;
   margin-right: 10%;
   z-index: 0;
+  image-resolution: from-image;
+  height: 200px;
+}
+
+.winehead {
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 475px;
+  text-align: center;
+  font-size: 80px;
+  color: white;
+}
+
+#wineries {
+  margin-left: 85px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin-top: 650px;
+}
+
+.winery {
+  background-color: white;
+  margin-right: 10px;
+}
+.cord {
+  margin-top: 500px;
+}
+
+.orfila {
+  margin-top: -368px;
+  margin-left: 800px;
+}
+
+.header {
+  margin-top: 60px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 6em;
+  color: white;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
