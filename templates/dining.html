@@ -66,11 +66,24 @@
   </div>
 
   <!-- Page Content Below This -->
-
   <h1 class="header">Home to a wide</h1>
   <h1 class="header-variety">varity of different restaurants</h1>
 
-  <script src="dining.js"></script>
+  <div class="searchbar">
+    <form method="post" action="/dining">
+      <!-- <input type="text" name="search" placeholder="Search.."> -->
+      <input name="searchEntry" type="text" onkeypress="handle(event)" placeholder="Search" value={{searchEntry}}>
+      <!-- <input id="search" type="button" value="search" onClick="search_func()"> -->
+    </form>
+  </div>
+
+  <div>
+    {% for item in content %}
+    <p>Business: {{item['name']}} Location: {{item['location']['display_address'][0]}}, {{item['location']['display_address'][1]}}</p>
+    {% endfor %}
+  </div>
+
+  <script src="scripts/dining.js"></script>
 </body>
 
 </html>

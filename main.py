@@ -186,6 +186,7 @@ class DiningPage(webapp2.RequestHandler):
     def get(self):
         logging.warning('HomePage get(self) working')
 
+        # Openweather API
         try:
             form_data = urllib.urlencode({'zip': '92104',
                                             'appid': OPENWEATHER_API_KEY})
@@ -206,6 +207,65 @@ class DiningPage(webapp2.RequestHandler):
 
     def post(self):
         logging.warning('DiningPage post(self) working')
+
+        query = self.request.get('searchEntry')
+
+        # Openweather API
+        try:
+            form_data = urllib.urlencode({'zip': '92104',
+                                            'appid': OPENWEATHER_API_KEY})
+            result = urlfetch.fetch(getWeatherURL() + form_data)
+            if result.status_code == 200:
+                content = json.loads(result.content)
+                main = content['main']
+                temp = main['temp']
+                temp = convertKelvinToFahrenheit(temp)
+                dict = {"temperature": temp}
+                mypage = env.get_template('templates/dining.html')
+                self.response.write(mypage.render(dict))
+            else:
+                logging.exception(result)
+                self.response.status = result.status_code
+        except urlfetch.Error:
+            logging.exception('Caught exception fetching url')
+
+        # Yelp API
+        search_term = self.request.get('searchEntry')
+        if search_term:
+            lterm = search_term.lower()
+            # create key
+            key = ndb.Key('UserSearch', lterm)
+            # Read database
+            search = key.get()
+            if not search:
+                # Create if not there
+                search = UserSearch(
+                    key=key, count=0,
+                    term=search_term)
+            # Update count
+            search.increment()
+            # Save
+            search.put()
+        else:
+            search_term = "restaurants"
+        params = {'term': search_term,
+                  'location': 'San Diego, California',
+                  'limit': 5}
+        form_data = urllib.urlencode(params)
+        api_url = 'https://api.yelp.com/v3/businesses/search?' + form_data
+
+        # Add your own API key
+        request = urllib2.Request(api_url, headers={"Authorization" : "Bearer " + YELP_API_KEY})
+        response = urllib2.urlopen(request).read()
+        content = json.loads(response)
+        mypage = env.get_template('templates/dining.html')
+        variables = {"content": content['businesses'],
+                     "temperature": temp}
+        #self.response.write(variables))
+        # TODO Strip the location, name, and rating
+        # b = content['businesses']
+        # logging.warning(b[0]['name'])
+        # logging.warning(variables)
 
 class DiningFastFoodPage(webapp2.RequestHandler):
 
