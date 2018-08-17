@@ -77,6 +77,24 @@ class ExplorationPage(webapp2.RequestHandler):
     def post(self):
         logging.warning('ExplorationPage post(self) working')
 
+        try:
+            form_data = urllib.urlencode({'zip': '92104',
+                                            'appid': OPENWEATHER_API_KEY})
+            result = urlfetch.fetch(getWeatherURL() + form_data)
+            if result.status_code == 200:
+                content = json.loads(result.content)
+                main = content['main']
+                temp = main['temp']
+                temp = convertKelvinToFahrenheit(temp)
+                dict = {"temperature": temp}
+                mypage = env.get_template('templates/exploration.html')
+                self.response.write(mypage.render(dict))
+            else:
+                logging.exception(result)
+                self.response.status = result.status_code
+        except urlfetch.Error:
+            logging.exception('Caught exception fetching url')
+
 class ExplorationHikingPage(webapp2.RequestHandler):
 
     def get(self):

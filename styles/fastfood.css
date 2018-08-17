@@ -90,6 +90,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   background-image: url("https://cdn.discordapp.com/attachments/478617278024253441/479782024865906698/canes.jpg");
   background-repeat: no-repeat;
+  background-size: 1920px 1050px;
   margin: 0px;
   margin-left: 10%;
   margin-right: 10%;
@@ -121,4 +122,26 @@ body {
   font-weight: bold;
   font-family: Apple_Chancery;
   font-size: 30px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
