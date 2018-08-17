@@ -88,7 +88,7 @@ a {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-image: url("http://architectureimg.com/wp-content/uploads/2017/06/bridges-wonderful-san-diego-beach-pier-sunset-california-waves-sea-wallpaper-wide.jpg");
+  background-image: url("https://cdn.discordapp.com/attachments/478617278024253441/479782024865906698/canes.jpg");
   background-repeat: no-repeat;
   margin: 0px;
   margin-left: 10%;
@@ -96,12 +96,12 @@ body {
   z-index: 0;
 }
 
-#spots-heading {
+.header {
+  margin-top: 250px;
+  margin-bottom: 0;
   text-align: center;
-  font-size: 50px;
-  font-style: oblique;
-  font-family: Apple_Chancery;
-  font-weight: bold;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 6em;
   color: white;
 }
 
@@ -111,12 +111,12 @@ body {
   grid-row-gap: 100px;
   font-family: inherit;
   font-weight: bold;
-  margin-top: 20px;
-  padding-left: 200px;
+  margin-top: 650px;
+  padding-left: 175px;
 }
 
 .spotheads a {
-  color: white;
+  color: black;
   font-style: oblique;
   font-weight: bold;
   font-family: Apple_Chancery;

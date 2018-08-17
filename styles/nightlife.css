@@ -92,10 +92,77 @@ a {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-image: url("https://i.ytimg.com/vi/DbI07KbTvBg/maxresdefault.jpg");
+  background-image: url("https://www.everfest.com/system/images/W1siZiIsIjIwMTUvMDMvMTgvMDIvNDYvMjYvNTE1L0NSU1NEX0Zlc3RpdmFsXzIwMTVfR2FsZW5fT2FrZXNfMjcuanBnIl1d/CRSSD_Festival_2015_Galen_Oakes%20-%2027.jpg");
   background-repeat: no-repeat;
   margin: 0px;
   margin-left: 10%;
   margin-right: 10%;
   z-index: 0;
+}
+
+.header {
+  margin-top: 250px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 6em;
+  color: white;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  text-align: center;
+  margin-top: 725px;
+  padding-left: 250px;
+}
+
+.container > div{
+
+  height: 300px;
+  width: 300px;
+  color: black;
+  margin: 5px;
+
+}
+
+#p1 > a{
+  color: black;
+}
+#p2 > a{
+  color: black;
+}
+#p3 > a{
+  color: black;
+}
+#p4 > a{
+  color: black;
+}
+#p5 > a{
+  color: black;
+}
+#p6 > a{
+  color: black;
 }

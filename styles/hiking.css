@@ -127,6 +127,14 @@ body {
   margin-top: 250px;
   text-align: center;
   font-family: 'Kaushan Script', cursive;
+  font-size: 2.5em;
+  color: white;
+}
+
+.header-hike {
+  margin-top: 0px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
   font-size: 6em;
   color: white;
 }
@@ -151,4 +159,39 @@ body {
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 300px;
+  padding-left: 250px;
+}
+
+.container > div{
+
+  height: 300px;
+  width: 300px;
+  color: black;
+  margin: 5px;
+
+}
+
+#p1 > a{
+  color: black;
+}
+#p2 > a{
+  color: black;
+}
+#p3 > a{
+  color: black;
+}
+#p4 > a{
+  color: black;
+}
+#p5 > a{
+  color: black;
+}
+#p6 > a{
+  color: black;
 }
