@@ -164,7 +164,7 @@ body {
 .container{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 300px;
+  margin-top: 600px;
   padding-left: 250px;
 }
 

@@ -130,3 +130,37 @@ body {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+.container{
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  text-align: center;
+  padding-left: 150px;
+  margin-top: 700px;
+}
+
+.container > div{
+  height: 300px;
+  width: 300px;
+  color: black;
+  margin: 5px;
+}
+
+#p1 > a{
+  color: black;
+}
+#p2 > a{
+  color: black;
+}
+#p3 > a{
+  color: black;
+}
+#p4 > a{
+  color: black;
+}
+#p5 > a{
+  color: black;
+}
+#p6 > a{
+  color: black;
+}
