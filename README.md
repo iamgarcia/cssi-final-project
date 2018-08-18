@@ -7,7 +7,7 @@ This service was created for the purpose of helping fellow San Diego residents a
 # Environment Requirements
 The environment to support this project consists of these tools:
 - Atom – this is the code editor that was used in class. (https://atom.io/)
-- OpenWeatherMap API Key – this is the API we used to get the current temperature in San Diego, CA. (https://openweathermap.org/api)
-- Yelp API Key – this is the API that we used to return a search for an exploration and dining request. (https://www.yelp.com/developers/documentation/v3/get_started)
+- OpenWeatherMap API – this is the API we used to get the current temperature in San Diego, CA. (https://openweathermap.org/api)
+- Yelp API – this is the API that we used to return a search for an exploration and dining request. (https://www.yelp.com/developers/documentation/v3/get_started)
 - Google App Engine – we were required to use Google App Engine for running a local server and for deploying our finished website to Google's servers using Google Cloud Platform. (https://cloud.google.com/appengine/)
 - Python 2.7 - we were required to use Python 2.7 for our web application. (https://cloud.google.com/appengine/docs/python/)
