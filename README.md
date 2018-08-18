@@ -18,3 +18,5 @@ The environment to support this project consists of these tools:
 - [Oscar Villa](https://www.linkedin.com/in/oscar-villa-642179169/) | Front-End Developer
 - [Sergio Acosta](https://www.linkedin.com/in/sergio-a-612078127/) | Front-End Developer
 - [Jose Gonzalez](https://www.linkedin.com/in/jose-gonzalez-50517a169/) | Front-End Developer
+
+Special thanks to [Mike Helmick](https://github.com/mikehelmick) for the guidance in our project!
